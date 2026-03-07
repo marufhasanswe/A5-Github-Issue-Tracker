@@ -1,5 +1,7 @@
 const username = document.getElementById("username-input");
 const password = document.getElementById("password-input");
+let issueCounterText = document.getElementById("issues-counter");
+let issuesCounter = 0;
 
 function submitLoginForm() {
   if (username.value == "admin" && password.value == "admin123") {
@@ -31,6 +33,9 @@ function getLabel(labels) {
 }
 
 function displayData(issues) {
+  issuesCounter = issues.length;
+  issueCounterText.textContent = issuesCounter;
+  console.log(issuesCounter);
   const issuesCardContainer = document.getElementById("issues-card-container");
   issuesCardContainer.innerHTML = "";
   issues.forEach((e) => {
@@ -59,8 +64,8 @@ function displayData(issues) {
             </div>
           </div>
           <div class="p-4 text-xs text-[#64748B]">
-            <p class="mb-2">#1 by john_doe</p>
-            <p>1/15/2024</p>
+            <p class="mb-2">${e.author.split("_").join(" ")}</p>
+            <p>${new Date(e.createdAt).toLocaleDateString("en-US")}</p>
           </div>
         </div>
     `;
