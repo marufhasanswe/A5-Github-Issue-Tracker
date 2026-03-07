@@ -1,0 +1,11 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+/* Tailwind CSS */
+@import "tailwindcss";
+
+/* Global Styles */
+body {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
