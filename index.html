@@ -16,14 +16,19 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#F8FAFC]">
+  <body class="">
     <main class="flex justify-center items-center min-h-screen">
       <fieldset
-        class="w-[520px] fieldset bg-white border-base-300 rounded-box border p-8"
+        class="w-[520px] fieldset bg-white border-base-300 rounded-box border p-8 shadow-lg"
       >
         <div class="text-center">
           <img class="mx-auto" src="assets/github-logo.png" alt="" />
@@ -37,6 +42,7 @@
 
         <label class="label text-[16px] text-[#1F2937]">Username</label>
         <input
+          id="username-input"
           type="text"
           class="input md:w-[456px]"
           placeholder="Enter Username"
@@ -44,12 +50,16 @@
 
         <label class="label text-[16px] text-[#1F2937]">Password</label>
         <input
+          id="password-input"
           type="password"
           class="input md:w-[456px]"
           placeholder="Password"
         />
 
-        <button class="btn btn-primary mt-4 bg-[#4A00FF] text-white">
+        <button
+          id="submit-btn"
+          class="btn btn-primary mt-4 bg-[#4A00FF] text-white"
+        >
           Sign in
         </button>
         <div class="divider text-[16px]">OR</div>

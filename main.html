@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Tracker</title>
+    <!-- Daisy UI Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#F8FAFC]">
+    <header>
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm md:px-20">
+          <div class="flex-1">
+            <a class="btn btn-ghost text-xl">
+              <img
+                src="assets/github-logo.png"
+                width="36px"
+                height="37px"
+                alt=""
+              />
+              GitHub Issues Tracker</a
+            >
+          </div>
+          <div class="flex gap-2">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered w-24 md:w-auto"
+            />
+            <div class="dropdown dropdown-end">
+              <div>
+                <div class="">
+                  <button
+                    class="cursor-pointer bg-[#4A00FF] px-4 py-2 rounded-sm font-semibold text-[16px] text-white"
+                  >
+                    <i class="fa-solid fa-plus"></i> New Issue
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <section id="tab-container">
+        <div role="tablist" class="tabs tabs-box">
+          <a role="tab" class="tab">Tab 1</a>
+          <a role="tab" class="tab tab-active">Tab 2</a>
+          <a role="tab" class="tab">Tab 3</a>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
