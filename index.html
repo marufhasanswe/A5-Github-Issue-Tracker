@@ -6,17 +6,66 @@
     <title>Github Tracker</title>
     <!-- Daisy UI Link -->
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4"
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-amber-300">
-    <h1>Welcome</h1>
+  <body class="bg-[#F8FAFC]">
+    <main class="flex justify-center items-center min-h-screen">
+      <fieldset
+        class="w-[520px] fieldset bg-white border-base-300 rounded-box border p-8"
+      >
+        <div class="text-center">
+          <img class="mx-auto" src="assets/github-logo.png" alt="" />
+          <h3 class="font-semibold text-2xl text-[#1F2937] pt-6 pb-1">
+            Github Issues Tracker
+          </h3>
+          <p class="text-[#64748B] text-[16px] mb-6">
+            Sign in to manage your issues
+          </p>
+        </div>
+
+        <label class="label text-[16px] text-[#1F2937]">Username</label>
+        <input
+          type="text"
+          class="input md:w-[456px]"
+          placeholder="Enter Username"
+        />
+
+        <label class="label text-[16px] text-[#1F2937]">Password</label>
+        <input
+          type="password"
+          class="input md:w-[456px]"
+          placeholder="Password"
+        />
+
+        <button class="btn btn-primary mt-4 bg-[#4A00FF] text-white">
+          Sign in
+        </button>
+        <div class="divider text-[16px]">OR</div>
+        <p class="text-[#64748B] mt-6 mb-2 text-sm text-center">
+          Demo Credential:
+        </p>
+        <div class="bg-[#F8FAFC] rounded-xl py-6">
+          <p class="text-[#1F2937] text-[16px] text-center">
+            <span class="font-semibold">Username:</span> admin
+          </p>
+          <p class="text-[#1F2937] text-[16px] text-center">
+            <span class="font-semibold">Password:</span> admin123
+          </p>
+        </div>
+      </fieldset>
+    </main>
 
     <script src="script.js"></script>
   </body>
