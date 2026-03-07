@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github Tracker</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Daisy UI Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="assets/github-logo.png"
@@ -25,12 +30,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#F8FAFC]">
+  <body class="bg-[#F8FAFC] min-h-screen">
     <header>
       <nav>
         <div class="navbar bg-base-100 shadow-sm md:px-20">
           <div class="flex-1">
-            <a class="btn btn-ghost text-xl">
+            <a class="btn btn-ghost text-sm md:text-xl">
               <img
                 src="assets/github-logo.png"
                 width="36px"
@@ -61,14 +66,60 @@
         </div>
       </nav>
     </header>
-    <main class="">
-      <section id="tab-container">
-        <div role="tablist" class="tabs tabs-box">
-          <a role="tab" class="tab">Tab 1</a>
-          <a role="tab" class="tab tab-active">Tab 2</a>
-          <a role="tab" class="tab">Tab 3</a>
+    <main class="max-w-[1110px] mx-auto p-2">
+      <!-- Tab section -->
+      <section
+        id="tab-container"
+        class="p-6 bg-white rounded-lg mt-4 md:mt-14 mb-4 shadow"
+      >
+        <button
+          class="btn btn-primary md:w-[120px] py-3 font-semibold text-[16px]"
+        >
+          All
+        </button>
+        <button
+          class="btn btn-outline md:w-[120px] py-3 font-semibold text-[16px] border-gray-300"
+        >
+          Open
+        </button>
+        <button
+          class="btn btn-outline md:w-[120px] py-3 font-semibold text-[16px] border-gray-300"
+        >
+          Closed
+        </button>
+      </section>
+      <!-- Issues track dashboard -->
+      <section
+        id="issues-counter-container"
+        class="flex flex-wrap gap-2 items-center justify-between bg-white rounded-tl-lg rounded-tr-lg shadow p-6"
+      >
+        <div class="flex items-center gap-2">
+          <div class="logo w-[50px] h-[50px]">
+            <img class="w-full" src="assets/Aperture.png" alt="" />
+          </div>
+          <div>
+            <h5 class="font-semibold text-xl text-[#1F2937]">
+              <span id="issues-counter">50</span> Issues
+            </h5>
+            <p class="text-[#64748B]">Track and manage your project issues</p>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-4">
+          <p>
+            <i class="fa-solid fa-circle text-green-600"></i>
+            <span class="text-[#1F2937] font-medium">Open</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-circle text-purple-600"></i>
+            <span class="text-[#1F2937] font-medium">Closed</span>
+          </p>
         </div>
       </section>
+      <!-- Issues Card section -->
+      <section
+        id="issues-card-container"
+        class="p-6 shadow grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-3"
+      ></section>
     </main>
     <script src="script.js"></script>
   </body>

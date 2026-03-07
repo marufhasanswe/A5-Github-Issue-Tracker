@@ -25,7 +25,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="">
+  <body class="bg-[#F8FAFC]">
     <main class="flex justify-center items-center min-h-screen">
       <fieldset
         class="w-[520px] fieldset bg-white border-base-300 rounded-box border p-8 shadow-lg"
@@ -46,6 +46,7 @@
           type="text"
           class="input md:w-[456px]"
           placeholder="Enter Username"
+          required
         />
 
         <label class="label text-[16px] text-[#1F2937]">Password</label>
@@ -54,9 +55,11 @@
           type="password"
           class="input md:w-[456px]"
           placeholder="Password"
+          required
         />
 
         <button
+          onclick="submitLoginForm()"
           id="submit-btn"
           class="btn btn-primary mt-4 bg-[#4A00FF] text-white"
         >
