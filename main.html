@@ -70,20 +70,26 @@
       <!-- Tab section -->
       <section
         id="tab-container"
-        class="p-6 bg-white rounded-lg mt-4 md:mt-14 mb-4 shadow"
+        class="p-6 bg-white rounded-lg mt-4 md:mt-14 mb-4 shadow space-x-2"
       >
         <button
+          id="all-btn"
+          onclick="tabToggle('all-btn')"
           class="btn btn-primary md:w-[120px] py-3 font-semibold text-[16px]"
         >
           All
         </button>
         <button
-          class="btn btn-outline md:w-[120px] py-3 font-semibold text-[16px] border-gray-300"
+          id="open-btn"
+          onclick="tabToggle('open-btn')"
+          class="btn md:w-[120px] py-3 font-semibold text-[16px"
         >
           Open
         </button>
         <button
-          class="btn btn-outline md:w-[120px] py-3 font-semibold text-[16px] border-gray-300"
+          id="closed-btn"
+          onclick="tabToggle('closed-btn')"
+          class="btn md:w-[120px] py-3 font-semibold text-[16px]"
         >
           Closed
         </button>
@@ -120,6 +126,22 @@
         id="issues-card-container"
         class="p-6 shadow grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-3"
       ></section>
+
+      <!-- Modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <script src="script.js"></script>
   </body>
