@@ -134,7 +134,7 @@ function displayData(issues) {
               ${e.title}
             </h3>
             <p class="text-xs text-[#64748B] mt-2 mb-3">
-              ${e.description}
+              ${e.description.split(" ").slice(0, 9).join(" ") + "..."}
             </p>
             <div id="labels-container" class="flex flex-wrap gap-1">
               ${getLabel(e.labels)}
