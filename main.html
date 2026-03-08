@@ -47,14 +47,16 @@
           </div>
           <div class="flex gap-2">
             <input
+              id="search-input-field"
               type="text"
               placeholder="Search"
               class="input input-bordered w-24 md:w-auto"
             />
             <div class="dropdown dropdown-end">
               <div>
-                <div class="">
+                <div id="search-btn" class="">
                   <button
+                    onclick="searchIssues()"
                     class="cursor-pointer bg-[#4A00FF] px-4 py-2 rounded-sm font-semibold text-[16px] text-white"
                   >
                     <i class="fa-solid fa-plus"></i> New Issue

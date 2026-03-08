@@ -5,6 +5,7 @@ let issuesCounter = 0;
 const allBtn = document.getElementById("all-btn");
 const openBtn = document.getElementById("open-btn");
 const closeBtn = document.getElementById("closed-btn");
+const searchInputField = document.getElementById("search-input-field");
 
 function submitLoginForm() {
   if (username.value == "admin" && password.value == "admin123") {
@@ -166,6 +167,14 @@ async function getIssues(status) {
     const closes = data.data.filter((e) => e.status == "closed");
     displayData(closes);
   }
+}
+
+async function searchIssues() {
+  const res = await fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInputField.value}`,
+  );
+  const data = await res.json();
+  displayData(data.data);
 }
 
 getIssues("all");
